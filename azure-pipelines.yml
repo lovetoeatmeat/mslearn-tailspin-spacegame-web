@@ -63,3 +63,10 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
     condition: succeeded()
+    
+  - task: PowerShell@2
+    inputs:
+        targetType: 'inline'
+        script: |
+          # Write your PowerShell commands here.
+          echo "Hello World"
